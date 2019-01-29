@@ -1,0 +1,4 @@
+alias antibundle='antibody bundle < ~/.dotfiles/antibody/.zsh_plugins.txt > ~/.dotfiles/antibody/.zsh_plugins.sh'
+alias nexus='emulator @Nexus_5X_API_23'
+alias ag++='~/Android/tmp/my-android-toolchain/bin/armv7a-linux-androideabi23-clang++ 
+-static-libstdc++'
