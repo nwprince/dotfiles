@@ -1,6 +1,7 @@
 alias antibundle='antibody bundle < ~/.dotfiles/antibody/.zsh_plugins.txt > ~/.dotfiles/antibody/.zsh_plugins.sh'
 alias dcrun='docker-compose -f ~/docker/docker-compose.yml up -d'
-
+alias windC='windscribe connect best'
+alais windD='windscribe disconnect'
 alias nexus='emulator @Nexus_5X_API_23'
 
 alias ag++='~/Android/tmp/my-android-toolchain/bin/armv7a-linux-androideabi23-clang++ 
