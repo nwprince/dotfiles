@@ -20,6 +20,6 @@ cat ~/.ssh/id_rsa
 while IFS="" read -r p || [ -n "$p" ]
 do
   yay -S --noconfirm --noanswer-edit --save $p
-done < peptides.txt
+done < packages.txt
 
 ln -sv "~/.dotfiles/vscode-insiders/settings.json" ~/.config/Code\ -\ Insiders/User/settings.json
