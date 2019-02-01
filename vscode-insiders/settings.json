@@ -1,0 +1,23 @@
+{
+    "workbench.colorTheme": "Dainty – Nord",
+    "workbench.iconTheme": "eq-material-theme-icons-palenight",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "300",
+    "files.autoSave": "onFocusChange",
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.showSlider": "always",
+    "editor.renderWhitespace": "all",
+    "editor.renderIndentGuides": false,
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.renderLineHighlight": "gutter",
+    "window.zoomLevel": 1,
+    "workbench.editor.showIcons": true,
+    "editor.fontSize": 18,
+    "editor.selectionHighlight": true,
+    "files.trimTrailingWhitespace": true,
+}
