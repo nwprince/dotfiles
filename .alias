@@ -1,7 +1,15 @@
 alias antibundle='antibody bundle < ~/.dotfiles/antibody/.zsh_plugins.txt > ~/.dotfiles/antibody/.zsh_plugins.sh'
 alias dcrun='docker-compose -f ~/docker/docker-compose.yml up -d'
+alias mkcd='foo() { mkdir -p "$1"; cd "$1" }; foo '
+alias myip='curl http://ipecho.net/plain; echo'
+alias ls='ls --color=auto'
+# Stop after sending count ECHO_REQUEST packets #
+alias ping='ping -c 5'
+# Do not wait interval 1 second, go fast #
+alias fastping='ping -c 100 -i 0.2'
+
 alias windC='windscribe connect best'
-alais windD='windscribe disconnect'
+alias windD='windscribe disconnect'
 alias nexus='emulator @Nexus_5X_API_23'
 
 alias ag++='~/Android/tmp/my-android-toolchain/bin/armv7a-linux-androideabi23-clang++ 
