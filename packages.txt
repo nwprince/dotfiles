@@ -12,6 +12,7 @@ lib32-nvidia-utils
 libva-intel-driver
 libva-vdpau-driver
 materia-theme-git
+mpv
 neofetch
 ntfs-eg
 nvidia

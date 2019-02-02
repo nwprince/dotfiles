@@ -23,3 +23,4 @@ do
 done < packages.txt
 
 ln -sv "~/.dotfiles/vscode-insiders/settings.json" ~/.config/Code\ -\ Insiders/User/settings.json
+ln -sv "~/.dotfiles/mpv" ~/.config/mpv
