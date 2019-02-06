@@ -1,0 +1,17 @@
+function mpvm() {
+	currentdir=$(pwd)
+	movieDir=$(find /mnt/Movies/Movies/ -type d -name '*'$1'*')
+	cd $movieDir
+	file=$(find . -iname '*.mkv' -o -iname '*.mp4')
+	mpv $file &
+	cd $currentDir
+}
+
+function mpvt() {
+	currentdir=$(pwd)
+	movieDir=$(find /mnt/Television/Television/ -type d -name '*'$1'*')
+	cd $movieDir
+	cd "Season $2"
+	# mpv $file &
+	# cd $currentDir
+}
