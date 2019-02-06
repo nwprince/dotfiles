@@ -12,13 +12,8 @@ ln -rsv ~/.dotfiles/mpv ~/.config/mpv
 mkdir ~/.ssh/config
 ln -sv ~/.dotfiles/.ssh/config ~/.ssh/confing
 sudo mkdir /etc/pacman.d/hooks
-sudo mv ~/.dotfiles/pacman.d/mirrorupgrade.hook ~/etc/pacman.d/hooks/
+sudo ln -sv ~/.dotfiles/pacman.d/mirrorupgrade.hook /etc/pacman.d/hooks/
 sudo pacman -Syyuu
-sudo git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-cd ..
-sudo rm -rf yay
 
 #Setup ssh
 ssh-keygen -t rsa -b 4096 -C "nwprince@gmail.com"
