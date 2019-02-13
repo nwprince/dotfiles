@@ -3,4 +3,4 @@ zsh-users/zsh-autosuggestions
 djui/alias-tips
 desyncr/auto-ls
 mafredri/zsh-async
-sindresorhus/pure
+denysdovhan/spaceship-prompt

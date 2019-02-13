@@ -8,5 +8,5 @@ source /home/nwprince/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH
 fpath+=( /home/nwprince/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-desyncr-SLASH-auto-ls )
 source /home/nwprince/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-mafredri-SLASH-zsh-async/async.plugin.zsh
 fpath+=( /home/nwprince/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-mafredri-SLASH-zsh-async )
-source /home/nwprince/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-sindresorhus-SLASH-pure/pure.plugin.zsh
-fpath+=( /home/nwprince/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-sindresorhus-SLASH-pure )
+source /home/nwprince/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-denysdovhan-SLASH-spaceship-prompt/spaceship.zsh
+fpath+=( /home/nwprince/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-denysdovhan-SLASH-spaceship-prompt )
