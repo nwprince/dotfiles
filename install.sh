@@ -1,6 +1,10 @@
 #!/bin/bash
 user=$(whoami)
 
+git config --global user.email "nwprince@gmail.com"
+git config --global user.name "nwprince"
+
+
 ln -sv ~/.dotfiles/.zshrc ~
 ln -rsv ~/.dotfiles/docker ~/docker
 mkdir ~/.config
