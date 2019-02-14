@@ -1,0 +1,10 @@
+docker
+docker-compose
+emby-server
+lib32-libva-intel-driver
+lib32-libva-vdpau-driver
+lib32-nvidia-utils
+libva-intel-driver
+libva-vdpau-driver
+nvidia
+nvidia-docker
