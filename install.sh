@@ -9,6 +9,7 @@ mkdir ~/.config/Code\ -\ Insiders/User
 ln -sv ~/.dotfiles/vscode-insiders/settings.json ~/.config/Code\ -\ Insiders/User/settings.json
 mkdir ~/.config/mpv
 ln -rsv ~/.dotfiles/mpv ~/.config/mpv
+mkdir ~/.ssh
 mkdir ~/.ssh/config
 ln -sv ~/.dotfiles/.ssh/config ~/.ssh/confing
 sudo mkdir /etc/pacman.d/hooks
@@ -25,7 +26,7 @@ cat /home/$user/.ssh/id_rsa
 
 while IFS="" read -r p || [ -n "$p" ]
 do
-  yay -S --noconfirm --noanswer-edit --save $p
+  yay -S --noconfirm  --save $p
 done < packages.txt
 
 
