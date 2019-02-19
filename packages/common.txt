@@ -2,6 +2,7 @@ android-studio-beta
 antibody
 firefox-nightly
 gnome-tweaks
+chrome-gnome-shell
 htop
 materia-theme-git
 mpv

@@ -36,6 +36,7 @@ conf_dot() {
 
   # Create Symlinks
   ln -sv ~/.dotfiles/.zshrc ~
+  ln -sv ~/.dotfiles/.zshrc.zni ~
   ln -rsv ~/.dotfiles/docker ~/docker
   ln -sv ~/.dotfiles/vscode-insiders/settings.json ~/.config/Code\ -\ Insiders/User/settings.json
   ln -rsv ~/.dotfiles/mpv ~/.config/mpv
