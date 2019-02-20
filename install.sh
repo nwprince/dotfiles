@@ -74,7 +74,7 @@ conf_dkr() {
 conf_nrd() {
   git clone https://github.com/arcticicestudio/nord-gnome-terminal.git /tmp/Nord
   cd /tmp/Nord/src
-  ./Nord.sh
+  ./nord.sh
   cd ~/.dotfiles
 }
 
