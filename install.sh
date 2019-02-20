@@ -71,17 +71,25 @@ conf_dkr() {
   docker-compose -f ~/docker/docker-compose.yml up -d
 }
 
+conf_nrd() {
+  git clone https://github.com/arcticicestudio/nord-gnome-terminal.git /tmp/Nord
+  cd /tmp/Nord/src
+  ./Nord.sh
+  cd ~/.dotfiles
+}
+
 show_menus() {
   clear
-	echo "  ~~~~~~~~~~~~~~~~~~~~~"
-	echo "  ~~~~~~INSTALLER~~~~~~"
-	echo "  ~~~~~~~~~~~~~~~~~~~~~"
-	echo "  1. Config github"
-	echo "  2. Config ssh"
-	echo "  3. Install Dotfiles"
+  echo "  ~~~~~~~~~~~~~~~~~~~~~"
+  echo "  ~~~~~~INSTALLER~~~~~~"
+  echo "  ~~~~~~~~~~~~~~~~~~~~~"
+  echo "  1. Config github"
+  echo "  2. Config ssh"
+  echo "  3. Install Dotfiles"
   echo "  4. Install packages"
   echo "  5. Config docker"
-  echo "  6. Exit"
+  echo "  6. Install Nord Color Scheme"
+  echo "  7. Exit"
   echo ""
 }
 
@@ -94,7 +102,8 @@ read_options() {
     3) conf_dot ;;
     4) conf_pkg ;;
     5) conf_dkr ;;
-    6) exit 0;;
+    6) conf_nrd ;;
+    7) exit 0;;
     *) echo -e "${RED}Error...${STD}" && sleep 2
   esac
 }
