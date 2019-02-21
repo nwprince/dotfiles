@@ -23,7 +23,6 @@ conf_ssh() {
 
 conf_dot() {
   # Make directories
-  mkdir ~/docker
   mkdir ~/.config
   mkdir ~/.config/Code\ -\ Insiders
   mkdir ~/.config/Code\ -\ Insiders/User
@@ -31,14 +30,15 @@ conf_dot() {
   sudo mkdir /etc/pacman.d/hooks
 
   # Set permissions
+  ln -rsv ~/.dotfiles/docker ~/docker
   sudo setfacl -Rdm G:docker:rwx ~/docker
   sudo chmod -R 755 ~/docker
 
   # Create Symlinks
   ln -sv ~/.dotfiles/.zshrc ~
   ln -sv ~/.dotfiles/.zshrc.zni ~
-  ln -rsv ~/.dotfiles/docker ~/docker
-  ln -sv ~/.dotfiles/vscode-insiders/settings.json ~/.config/Code\ -\ Insiders/User/settings.json
+  ln -sv ~/.dotfiles/vscode-insiders/settings.json ~/.config/Code\ -\ 
+Insiders/User/settings.json
   ln -rsv ~/.dotfiles/mpv ~/.config/mpv
   sudo ln -sv ~/.dotfiles/pacman.d/mirrorupgrade.hook /etc/pacman.d/hooks/
   sudo pacman -Syyuu
@@ -64,11 +64,11 @@ conf_dkr() {
   sudo systemctl enable docker.service
   sudo systemctl start docker.service
   sudo usermod -aG docker ${USER}
-  echo "PUID=1000" > /etc/environment
-  echo "PGID=970" > /etc/environment
-  echo "TZ=\"America/Chicago\""
-  echo "USERDIR=\"/home/nwprince\""
-  docker-compose -f ~/docker/docker-compose.yml up -d
+  sudo echo "PUID=1000" > /etc/environment
+  sudo echo "PGID=970" > /etc/environment
+  sudo echo "TZ=\"America/Chicago\"" > /etc/environment
+  sudo echo "USERDIR=\"/home/nwprince\"" > /etc/environment
+  docker-compose -f /home/nwprince/docker/docker-compose.yml up -d
 }
 
 conf_nrd() {

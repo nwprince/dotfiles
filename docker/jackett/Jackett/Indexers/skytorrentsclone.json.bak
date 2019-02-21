@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sitelink",
+    "type": "inputstring",
+    "name": "Site Link",
+    "value": "https://www.skytorrents.to/"
+  },
+  {
+    "id": "cookieheader",
+    "type": "hiddendata",
+    "name": "CookieHeader",
+    "value": "__cfduid=d9862256bf02fb42ca2f784a931483af61550702500"
+  },
+  {
+    "id": "lasterror",
+    "type": "hiddendata",
+    "name": "LastError",
+    "value": null
+  },
+  {
+    "id": "adddownloadlinksviaitorrents.org",
+    "type": "inputbool",
+    "name": "Add download links via itorrents.org",
+    "value": true
+  },
+  {
+    "id": "itorrentsnote",
+    "type": "displayinfo",
+    "name": "ITorrents Note",
+    "value": "Without the itorrents option only magnet links will be provided."
+  }
+]

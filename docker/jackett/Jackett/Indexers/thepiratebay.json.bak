@@ -1,0 +1,37 @@
+[
+  {
+    "id": "sitelink",
+    "type": "inputstring",
+    "name": "Site Link",
+    "value": "https://thepiratebay.org/"
+  },
+  {
+    "id": "cookieheader",
+    "type": "hiddendata",
+    "name": "CookieHeader",
+    "value": "__cfduid=d4c8cf8fb6b57a3fd1b526e7e679168d01550702576; PHPSESSID=9febf51e536f96e13678652d765e2cbf; language=en_EN"
+  },
+  {
+    "id": "lasterror",
+    "type": "hiddendata",
+    "name": "LastError",
+    "value": ""
+  },
+  {
+    "id": "orderresults",
+    "type": "inputselect",
+    "name": "Order results",
+    "value": "99",
+    "options": {
+      "99": "Default",
+      "8": "Seeders",
+      "3": "Time"
+    }
+  },
+  {
+    "id": "proxies",
+    "type": "displayinfo",
+    "name": "Proxies",
+    "value": "The Pirate Bay is currently only reachable via TOR. But you can try to use an unofficial proxy from <a href=\"https://piratebayproxy.info/\" target=\"_blank\">piratebayproxy.info</a>."
+  }
+]
