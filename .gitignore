@@ -8,6 +8,14 @@ docker/radarr/config.xml
 docker/radarr/logs.db
 docker/radarr/logs/
 docker/radarr/nzbdrone.pid
+docker/radarr/nzbdrone.db
+docker/radarr/nzbdrone.db-shm
+docker/radarr/nzbdrone.db-wal
+docker/radarr/MediaCover/
+docker/radarr/logs.db-shm
+docker/radarr/logs.db-wal
+docker/sonarr/nzbdrone.db-shm
+docker/sonarr/nzbdrone.db-wal
 docker/sonarr/Backups/
 docker/sonarr/MediaCover/
 docker/sonarr/UpdateLogs/
@@ -18,4 +26,5 @@ docker/sonarr/logs.db-wal
 docker/sonarr/logs/
 docker/sonarr/nzbdrone.pid
 docker/transmission/blocklist-update.sh
-
+docker/transmission/resume/*
+docker/transmission/torrents/*
