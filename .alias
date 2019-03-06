@@ -8,7 +8,7 @@ alias fastping='ping -c 100 -i 0.2'
 alias setupSSH='foo() { eval $(ssh-agent); ssh-add -K; }; foo '
 alias windC='windscribe connect best'
 alias windD='windscribe disconnect'
-alias nexus='emulator @Nexus_5X_API_23'
+alias nexus='emulator @nexus'
 alias ag++='~/Android/tmp/my-android-toolchain/bin/armv7a-linux-androideabi23-clang++
 -static-libstdc++'
 
