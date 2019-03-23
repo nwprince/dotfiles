@@ -15,3 +15,11 @@ function mpvt() {
 	# mpv $file &
 	# cd $currentDir
 }
+
+getnews () {
+  curl https://newsapi.org/v2/top-headlines -s -G \
+    -d sources=$1 \
+    -d apiKey=ea63aa78ccb4416c8e43d8d63d467ba4 \
+    | jq '.articles[] | .title'
+}
+

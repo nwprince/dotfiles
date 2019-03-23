@@ -1,16 +1,31 @@
+alias ag++='~/Android/tmp/my-android-toolchain/bin/armv7a-linux-androideabi23-clang++-static-libstdc++'
 alias antibundle='antibody bundle < ~/.dotfiles/antibody/.zsh_plugins.txt > ~/.dotfiles/antibody/.zsh_plugins.sh'
 alias dcrun='docker-compose -f ~/docker/docker-compose.yml up -d'
+alias fastping='ping -c 100 -i 0.2'
+alias fortune='fortune | cowsay | lolcat'
+alias free='free -h'
+alias gowork='cd $GOWORKSPACE'
+alias k='clear'
+alias ls='lsd'
 alias mkcd='foo() { mkdir -p "$1"; cd "$1" }; foo '
 alias myip='curl http://ipecho.net/plain; echo'
-alias ls='ls --color=auto'
+alias nexus='emulator @nexus'
 alias ping='ping -c 5'
-alias fastping='ping -c 100 -i 0.2'
+alias please='sudo !!'
 alias setupSSH='foo() { eval $(ssh-agent); ssh-add -K; }; foo '
+alias snano='sudo nano'
 alias windC='windscribe connect best'
 alias windD='windscribe disconnect'
-alias nexus='emulator @nexus'
-alias ag++='~/Android/tmp/my-android-toolchain/bin/armv7a-linux-androideabi23-clang++
--static-libstdc++'
+alias zshrc='nano ~/.zshrc'
 
+#packages aliases
+alias remove='yay -Rs'
+alias install='yay'
+alias pinfo='yay -Qi'
+alias orphan='yay -Rns' #remove orphaned packages
+alias cleanc='yay -Scc' #clean cached packages
 
-alias gowork='cd $GOWORKSPACE'
+#git
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'

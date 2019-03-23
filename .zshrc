@@ -16,9 +16,11 @@ bindkey -e
 # End of lines configured by zsh-newuser-install
 
 
+source ~/.dotfiles/.env
+[[ $- != *i* ]] && return
+
 source ~/.dotfiles/antibody/.zsh_plugins.sh
 source ~/.dotfiles/.alias
-source ~/.dotfiles/.env
 source ~/.dotfiles/.functions
 
 ZSH_THEME="spaceship"

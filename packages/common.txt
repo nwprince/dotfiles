@@ -1,11 +1,15 @@
 android-studio-beta
 antibody
 chrome-gnome-shell
+cowsay
 firefox-nightly
+fortune-mod-futurama
 gnome-tweaks
 go
 go-tools
 htop
+lolcat
+lsd
 materia-theme-git
 mpv
 neofetch
