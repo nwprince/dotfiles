@@ -11,7 +11,7 @@
   "editor.formatOnSave": true,
   "editor.rulers": [80, 120],
   "editor.renderLineHighlight": "gutter",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "workbench.editor.showIcons": true,
   "editor.fontSize": 16,
   "editor.selectionHighlight": true,
