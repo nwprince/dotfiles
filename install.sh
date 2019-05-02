@@ -40,6 +40,7 @@ conf_dot() {
   ln -sv ~/.dotfiles/vscode-insiders/settings.json ~/.config/Code\ -\ 
 Insiders/User/settings.json
   ln -rsv ~/.dotfiles/mpv ~/.config/mpv
+  ln -rsv /mnt/Television/Wallpapers ~/Pictures/
   sudo ln -sv ~/.dotfiles/pacman.d/mirrorupgrade.hook /etc/pacman.d/hooks/
   sudo pacman -Syyuu
 }

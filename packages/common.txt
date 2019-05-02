@@ -1,5 +1,6 @@
 android-studio-beta
 antibody
+bitwarden-bin
 chrome-gnome-shell
 cowsay
 firefox-nightly

@@ -17,9 +17,19 @@ function mpvt() {
 }
 
 getnews () {
-  curl https://newsapi.org/v2/top-headlines -s -G \
-    -d sources=$1 \
+  curl https://newsapi.org/v2/everything -s -G \
+    -d q=$1 \
+    -d sortBy=popularity \
     -d apiKey=ea63aa78ccb4416c8e43d8d63d467ba4 \
     | jq '.articles[] | .title'
 }
 
+note () {
+	cd ~/.notable
+	git checkout master && git up
+	sleep 10
+	notable
+	echo "done"
+
+	# cd ~/.dotfiles
+}
