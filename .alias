@@ -28,7 +28,19 @@ alias orphan='yay -Rns' #remove orphaned packages
 alias cleanc='yay -Scc' #clean cached packages
 
 #git
+alias g.='git add .'
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
+alias gd='git diff'
 alias push='git push'
+
+#fzf
+alias exact='fzf -e'
+alias file='fd --type f | fzf'
+alias fzfls='fzf | xargs ls -l'
+alias kill='kill -9'
+
+#bat
+alias bat='bat -n'
+alias cat='bat'

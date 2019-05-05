@@ -1,0 +1,12 @@
+[user]
+	name = Noah Prince
+	email = nwprince@gmail.com
+
+[core]
+	editor = nano
+	excludesfile= ~/.gitignore
+
+[push]
+	default = current
+[alias]
+	up = "!git remote update -p; git merge --ff-only @{u}"

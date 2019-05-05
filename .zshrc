@@ -22,5 +22,7 @@ source ~/.dotfiles/.env
 source ~/.dotfiles/antibody/.zsh_plugins.sh
 source ~/.dotfiles/.alias
 source ~/.dotfiles/.functions
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
 ZSH_THEME="spaceship"

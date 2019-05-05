@@ -5,6 +5,7 @@ chrome-gnome-shell
 cowsay
 firefox-nightly
 fortune-mod-futurama
+fzf
 gnome-tweaks
 go
 go-tools
