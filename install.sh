@@ -4,11 +4,6 @@ HOSTNAME=$(hostname)
 RED='\033[0;41;30m'
 STD='\033[0;0;39m'
 
-conf_git() {
-  git config --global user.email "nwprince@gmail.com"
-  git config --global user.name "nwprince"
-}
-
 conf_ssh() {
   mkdir ~/.ssh
   mkdir ~/.ssh/config
@@ -23,26 +18,29 @@ conf_ssh() {
 
 conf_dot() {
   # Make directories
-  mkdir ~/.config
-  mkdir ~/.config/Code\ -\ Insiders
-  mkdir ~/.config/Code\ -\ Insiders/User
-  mkdir ~/.config/mpv
-  sudo mkdir /etc/pacman.d/hooks
-
+  mkdir -p ~/.config
+  mkdir -p ~/.config/Code\ -\ Insiders
+  mkdir -p ~/.config/Code\ -\ Insiders/User
+  mkdir -p ~/.config/mpv
+  sudo mkdir -p /etc/pacman.d/hooks
   # Set permissions
   ln -rsv ~/.dotfiles/docker ~/docker
   sudo setfacl -Rdm G:docker:rwx ~/docker
   sudo chmod -R 755 ~/docker
-
   # Create Symlinks
+  sudo pacman -Syyuu
+}
+
+symlinkDots () {
   ln -sv ~/.dotfiles/.zshrc ~
   ln -sv ~/.dotfiles/.zshrc.zni ~
-  ln -sv ~/.dotfiles/vscode-insiders/settings.json ~/.config/Code\ -\ 
-Insiders/User/settings.json
+  ln -sv ~/.dotfiles/.gitignore ~
+  ln -sv ~/.dotfiles/.gitconfig ~
+  ln -sv ~/.dotfiles/vscode-insiders/settings.json ~/.config/Code\ -\
+  Insiders/User/settings.json
   ln -rsv ~/.dotfiles/mpv ~/.config/mpv
   ln -rsv /mnt/Television/Wallpapers ~/Pictures/
   sudo ln -sv ~/.dotfiles/pacman.d/mirrorupgrade.hook /etc/pacman.d/hooks/
-  sudo pacman -Syyuu
 }
 
 conf_pkg() {
@@ -86,11 +84,12 @@ show_menus() {
   echo "  ~~~~~~~~~~~~~~~~~~~~~"
   echo "  1. Config github"
   echo "  2. Config ssh"
-  echo "  3. Install Dotfiles"
-  echo "  4. Install packages"
-  echo "  5. Config docker"
-  echo "  6. Install Nord Color Scheme"
-  echo "  7. Exit"
+  echo "  3. Setup Dotfiles"
+  echo "  4. Symlink Files"
+  echo "  5. Install packages"
+  echo "  6. Config docker"
+  echo "  7. Install Nord Color Scheme"
+  echo "  8. Exit"
   echo ""
 }
 
@@ -101,10 +100,11 @@ read_options() {
     1) conf_git ;;
     2) conf_ssh ;;
     3) conf_dot ;;
-    4) conf_pkg ;;
-    5) conf_dkr ;;
-    6) conf_nrd ;;
-    7) exit 0;;
+    4) symlinkDots ;;
+    5) conf_pkg ;;
+    6) conf_dkr ;;
+    7) conf_nrd ;;
+    8) exit 0;;
     *) echo -e "${RED}Error...${STD}" && sleep 2
   esac
 }
