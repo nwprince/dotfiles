@@ -1,2 +1,11 @@
+light
+mako
+playerctl
+sway
+swayidle
+swaylock
+swaylock-fancy-git
+termite
+waybar
 tlp
 tlp-rdw
