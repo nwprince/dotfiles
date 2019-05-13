@@ -1,0 +1,268 @@
+###########################################
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░#
+#░░█▀█░█░░░█░█░█▀▀░░░█░█░█░░░▀█▀░█▀▄░█▀█░░#
+#░░█▀▀░█░░░█░█░▀▀█░░░█░█░█░░░░█░░█▀▄░█▀█░░#
+#░░▀░░░▀▀▀░▀▀▀░▀▀▀░░░▀▀▀░▀▀▀░░▀░░▀░▀░▀░▀░░#
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░#
+###########################################
+
+
+#########################################
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░#
+#░░█░█░█▀█░█▀▄░▀█▀░█▀█░█▀▄░█░░░█▀▀░█▀▀░░#
+#░░▀▄▀░█▀█░█▀▄░░█░░█▀█░█▀▄░█░░░█▀▀░▀▀█░░#
+#░░░▀░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀░░▀▀▀░▀▀▀░▀▀▀░░#
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░#
+#########################################
+
+# Modifier key (Mod1 = Alt, Mod4 = Meta)
+set $mod Mod1
+
+# Movement keys
+set $left h
+set $down j
+set $up k
+set $right l
+
+# Terminal
+set $term env termite
+
+# Browser
+set $browser gtk-launch google-chrome-unstable
+set $browsernumber 2
+
+# Swaylock
+set $swaylock swaylock-fancy -f "Hack-Regular-Nerd-Font-Complete"
+
+# Menu
+set $menu-run rofi -show run
+set $menu-window rofi -show window
+
+# Output names
+set $monitor-center eDP-1
+
+# Input names
+set $touchpad 2:18:FocalTechPS/2_FocalTech_Touchpad
+
+# Sounds
+set $audiobell paplay /usr/share/sounds/freedesktop/stereo/bell.oga
+
+# Workspace names
+set $workspace1 1
+set $workspace2 2
+set $workspace3 3
+set $workspace4 4
+set $workspace5 5
+set $workspace6 6
+set $workspace7 7
+set $workspace8 8
+set $workspace9 9
+set $workspace10 10
+
+#############################
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░#
+#░░█▀█░█░█░▀█▀░█▀█░█░█░▀█▀░░#
+#░░█░█░█░█░░█░░█▀▀░█░█░░█░░░#
+#░░▀▀▀░▀▀▀░░▀░░▀░░░▀▀▀░░▀░░░#
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░#
+#############################
+
+# Backgrounds
+output $monitor-center bg /home/nwprince/.dotfiles/wallpapers/leto.jpg fill
+
+# Positioning
+output $monitor-center scale 1.5
+
+###################################################
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░#
+#░░█░█░█▀▀░█░█░░░█▀▄░▀█▀░█▀█░█▀▄░▀█▀░█▀█░█▀▀░█▀▀░░#
+#░░█▀▄░█▀▀░░█░░░░█▀▄░░█░░█░█░█░█░░█░░█░█░█░█░▀▀█░░#
+#░░▀░▀░▀▀▀░░▀░░░░▀▀░░▀▀▀░▀░▀░▀▀░░▀▀▀░▀░▀░▀▀▀░▀▀▀░░#
+#░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░#
+###################################################
+
+#set inputs
+input $touchpad tap enabled
+
+# Start a terminal
+bindsym $mod+Return exec $term
+
+# Start a chrome session
+bindsym $mod+Shift+Return exec $browser
+
+# Kill focused window
+bindsym $mod+q kill
+
+# Reload configuration
+bindsym $mod+Shift+r reload
+
+# Lock
+bindsym $mod+Escape exec $swaylock
+
+# Open run menu
+bindsym $mod+d exec $menu-run
+
+# Open window menu
+bindsym $mod+Shift+d exec $menu-window
+
+# Drag floating windows while holding down modifier key
+floating_modifier $mod normal
+
+# Sticky windows
+bindsym $mod+Shift+s sticky toggle
+
+# Toggle fullscreen
+bindsym $mod+f fullscreen
+
+# Toggle floating
+bindsym $mod+Shift+space floating toggle
+
+# Toggle floating focus
+bindsym $mod+space focus mode_toggle
+
+# Focus the parent container
+bindsym $mod+a focus parent
+
+# Focus the child container
+bindsym $mod+c focus child
+
+# Split horizontal
+bindsym $mod+b splith
+
+# Split vertical
+bindsym $mod+v splitv
+
+# Move window into scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Get window out of scratchpad
+bindsym $mod+minus scratchpad show
+
+# Change layout style
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+Shift+v layout splitv
+bindsym $mod+Shift+b layout splith
+
+# Moving focus
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+# Moving windows
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+# Switching workspace
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace10
+
+# Moving windows to workspace
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+Shift+0 move container to workspace $workspace10
+
+# Resize mode
+set $mode_resize Resize: left ($left), right ($right), up ($up), down ($down)
+mode "$mode_resize" {
+	# Shrink the width
+	bindsym $left resize shrink width 10px
+
+	# Grow the width
+	bindsym $right resize grow width 10px
+
+	# Shrink the height
+	bindsym $up resize shrink height 10px
+
+	# Grow the height
+	bindsym $down resize grow height 10px
+
+	# Return to default mode
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+
+set $mode_system System: (1) lock, (e) logout, (s) suspend, (r) reboot, (S) shutdown
+mode "$mode_system" {
+	bindsym l exec $swaylock, mode "default"
+	bindsym e exit
+	bindsym s exec --no-startup-id systemctl suspend, mode "default"
+	bindsym r exec --no-startup-id systemctl reboot, mode "default"
+	bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+	# Return to default mode
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+Shift+e mode "$mode_system"
+
+exec swayidle \
+  timeout 300 'exec $swaylock' \
+  timeout 600 'swaymsg "output * dpms off"' \
+  after-resume 'swaymsg "output * dpms on"' \
+  before-sleep 'exec $swaylock'
+
+# Enter resize mode
+bindsym $mod+r mode "$mode_resize"
+
+# Brightness commands
+bindsym --locked XF86MonBrightnessUp exec light -A 5 
+bindsym --locked XF86MonBrightnessDown exec light -U 5
+
+# Volume commands
+bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%; exec $audiobell
+bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%; exec $audiobell
+bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+exec_always mako --anchor=top-center
+bindsym Control+Space exec makoctl dismiss
+bindsym Control+Shift+Space exec makoctl dismiss --all
+
+#################
+#░░░░░░░░░░░░░░░#
+#░░█▀▄░█▀█░█▀▄░░#
+#░░█▀▄░█▀█░█▀▄░░#
+#░░▀▀░░▀░▀░▀░▀░░#
+#░░░░░░░░░░░░░░░#
+#################
+
+bar {
+	# Run waybar
+	swaybar_command waybar
+}
+
+#########################
+#░░░░░░░░░░░░░░░░░░░░░░░#
+#░░█▀▀░▀█▀░█░█░█░░░█▀▀░░#
+#░░▀▀█░░█░░░█░░█░░░█▀▀░░#
+#░░▀▀▀░░▀░░░▀░░▀▀▀░▀▀▀░░#
+#░░░░░░░░░░░░░░░░░░░░░░░#
+#########################
+
+# Remove title bars
+default_border none
+
+# Don't focus moused over windows
+focus_follows_mouse no
+
+# Gaps
+gaps outer 10
+gaps inner 5

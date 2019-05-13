@@ -21,7 +21,6 @@ conf_dot() {
   mkdir -p ~/.config
   mkdir -p ~/.config/Code\ -\ Insiders
   mkdir -p ~/.config/Code\ -\ Insiders/User
-  mkdir -p ~/.config/mpv
   sudo mkdir -p /etc/pacman.d/hooks
   # Set permissions
   ln -rsv ~/.dotfiles/docker ~/docker
@@ -36,9 +35,13 @@ symlinkDots () {
   ln -sv ~/.dotfiles/.zshrc.zni ~
   ln -sv ~/.dotfiles/.gitignore ~
   ln -sv ~/.dotfiles/.gitconfig ~
-  ln -sv ~/.dotfiles/vscode-insiders/settings.json ~/.config/Code\ -\
-  Insiders/User/settings.json
-  ln -rsv ~/.dotfiles/mpv ~/.config/mpv
+  ln -sv ~/.dotfiles/vscode-insiders/settings.json ~/.config/Code\ -\ Insiders/User
+  ln -rsv ~/.dotfiles/mpv ~/.config/
+  ln -rsv ~/.dotfiles/sway ~/.config/
+  ln -rsv ~/.dotfiles/waybar ~/.config/
+  ln -rsv ~/.dotfiles/termite ~/.config/
+  ln -rsv ~/.dotfiles/rofi ~/.config/
+  ln -rsv ~/.dotfiles/mako ~/.config/
   ln -rsv /mnt/Television/Wallpapers ~/Pictures/
   sudo ln -sv ~/.dotfiles/pacman.d/mirrorupgrade.hook /etc/pacman.d/hooks/
 }

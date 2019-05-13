@@ -49,3 +49,7 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
   fd --type d --hidden --follow --exclude ".git" . "$1"
 }
+
+fzf-find() {
+  zle -I; nvim "$(find $PWD -name "*" | termite -e)"}
+  zle -N   fzf-find

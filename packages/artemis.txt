@@ -1,3 +1,4 @@
+android-studio-eta
 docker
 docker-compose
 emby-server
