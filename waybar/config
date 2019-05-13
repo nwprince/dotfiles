@@ -1,0 +1,76 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "modules-left": [
+    "sway/workspaces",
+    "sway/mode",
+    "custom/spotify"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "network",
+    "pulseaudio",
+    "backlight",
+    "battery"
+  ],
+  "sway/window":{
+    "max-length": 80
+  },
+  "mpd": {
+    "tooltip": false,
+    "format": "{stateIcon} {artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+    "format-disconnected": "ﳌ",
+    "format-stopped": "",
+    "state-icons": {
+      "playing": "",
+      "paused": ""
+    }
+  },
+  "pulseaudio": {
+    "tooltip": false,
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "format-muted": "奄",
+    "format-icons": {
+      "default": [
+        "奄",
+        "奔",
+        "墳"
+      ]
+    }
+  },
+  "network": {
+    "tooltip": false,
+    "format-wifi": " {essid} {ipaddr}",
+    "format-ethernet": " {ipaddr}"
+  },
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "format-charging": "{capacity}% ",
+    "interval": 30,
+    "states": {
+      "warning": 25,
+      "critical": 10
+    },
+    "tooltip": false
+  },
+  "clock": {
+    "format": "{:%a, %d. %b  %I:%M %p}",
+    "tooltip": false
+  },
+  "backlight": {
+    "format": "\uf5de {percent}%",
+    "on-scroll-down": "light -A 1",
+    "on-scroll-up": "light -U 1"
+  },
+  "custom/spotify": {
+    "interval": 1,
+    "return-type": "json",
+    "exec": "~/.dotfiles/waybar/modules/spotify.sh",
+    "exec-if": "pgrep spotify",
+    "escape": true
+  }
+}

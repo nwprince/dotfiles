@@ -1,35 +1,4 @@
 #install tools
-conf_dot() {
-    # Make directories
-    mkdir ~/.config
-    mkdir ~/.config/Code\ -\ Insiders
-    mkdir ~/.config/Code\ -\ Insiders/User
-    mkdir ~/.config/mpv
-    sudo mkdir /etc/pacman.d/hooks
-
-    # Set permissions
-    ln -rsv ~/.dotfiles/docker ~/docker
-    sudo setfacl -Rdm G:docker:rwx ~/docker
-    sudo chmod -R 755 ~/docker
-
-    # Create Symlinks
-    symlinkDots()
-    sudo pacman -Syyuu
-  }
-
-function symlinkDots () {
-    ln -sv ~/.dotfiles/.zshrc ~
-    ln -sv ~/.dotfiles/.zshrc.zni ~
-    ln -sv ~/.dotfiles/.gitignore ~
-    ln -sv ~/.dotfiles/gitconfig ~
-    ln -sv ~/.dotfiles/vscode-insiders/settings.json ~/.config/Code\ -\
-  Insiders/User/settings.json
-    ln -rsv ~/.dotfiles/mpv ~/.config/mpv
-    ln -rsv /mnt/Television/Wallpapers ~/Pictures/
-    sudo ln -sv ~/.dotfiles/pacman.d/mirrorupgrade.hook /etc/pacman.d/hooks/
-}
-
-
 function mpvm() {
 	currentdir=$(pwd)
 	movieDir=$(find /mnt/Movies/Movies/ -type d -name '*'$1'*')
@@ -80,3 +49,7 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
   fd --type d --hidden --follow --exclude ".git" . "$1"
 }
+
+fzf-find() {
+  zle -I; nvim "$(find $PWD -name "*" | termite -e)"}
+  zle -N   fzf-find

@@ -1,0 +1,10 @@
+[options]
+allow_bold = true
+font = Hack Nerd Font Mono 16
+
+[colors]
+# Special
+foreground = #f8f8f2
+foreground_bold = #f8f8f2
+cursor = #f8f8f2
+background = #282a36
