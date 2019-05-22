@@ -10,3 +10,4 @@
 	default = current
 [alias]
 	up = "!git remote update -p; git merge --ff-only @{u}"
+	sub="git submodule update --init --recursive -j 8"

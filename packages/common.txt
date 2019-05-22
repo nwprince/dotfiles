@@ -29,7 +29,6 @@ rofi
 spotify
 tela-icon-theme-git
 telegram-desktop
-visual-studio-code-insiders
 vlc
 windscribe-cli
 zafiro-icon-theme-git
