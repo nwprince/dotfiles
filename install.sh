@@ -5,14 +5,14 @@ RED='\033[0;41;30m'
 STD='\033[0;0;39m'
 
 conf_all() {
-  conf_ssh()
-  conf_dot()
-  symlinkDots()
-  conf_pkg()
-  conf_dkr()
-  conf_proj()
-  conf_notes()
-  conf_nrd()
+  conf_ssh
+  conf_dot
+  symlinkDots
+  conf_pkg
+  conf_dkr
+  conf_proj
+  conf_notes
+  conf_nrd
 }
 
 conf_ssh() {
