@@ -5,6 +5,7 @@ alias dcrun='sudo docker-compose -f ~/docker/docker-compose.yml up -d'
 alias fastping='ping -c 100 -i 0.2'
 alias fortune='fortune | cowsay | lolcat'
 alias free='free -h'
+alias fuck='sudo $(fc -ln -1)'
 alias gocode='gowork && code-insiders .'
 alias goweb='cd $GOWORKSPACE/web/public && code-insiders . && npm run start'
 alias gowork='cd $GOWORKSPACE'
@@ -24,8 +25,9 @@ alias zshrc='nano ~/.zshrc'
 #packages aliases
 alias remove='yay -Rs'
 alias install='yay'
+alias installed="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 alias pinfo='yay -Qi'
-alias orphan='yay -Rns' #remove orphaned packages
+alias orphan='yay -Rns $(pacman -Qtdq)' #remove orphaned packages
 alias cleanc='yay -Scc' #clean cached packages
 
 #git

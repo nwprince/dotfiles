@@ -35,6 +35,22 @@ note () {
 	# cd ~/.dotfiles
 }
 
+update_sway () {
+	case $(hostname) in
+    artemis) update_sway_desktop ;;
+    leto) update_sway_laptop ;;
+  esac
+}
+
+update_sway_desktop () {
+	cat ~/.dotfiles/sway/config_base > ~/.dotfiles/sway/config
+	cat ~/.dotfiles/sway/config_desktop >> ~/.dotfiles/sway/config
+}
+
+update_sway_laptop () {
+	cat ~/.dotfiles/sway/config_base > ~/.dotfiles/sway/config
+	cat ~/.dotfiles/sway/config_laptop >> ~/.dotfiles/sway/config
+}
 
 #fzf
 # Use fd (https://github.com/sharkdp/fd) instead of the default find

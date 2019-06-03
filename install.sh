@@ -55,10 +55,23 @@ symlinkDots () {
   ln -rsv ~/.dotfiles/mako ~/.config/
   ln -rsv /mnt/Television/Wallpapers ~/Pictures/
   case $HOSTNAME in
-    artemis) ln -sv ~/.dotfiles/sway/config_desktop ~/.config/sway/config ;;
-    leto) ln -sv ~/.dotfiles/sway/config_laptop ~/.config/sway/config ;;
+    artemis) conf_sway_desktop ;;
+    leto) conf_sway_laptop ;;
   esac
+  ln -sv ~/.dotfiles/sway/config ~/.config/sway/config
   sudo ln -sv ~/.dotfiles/pacman.d/mirrorupgrade.hook /etc/pacman.d/hooks/
+}
+
+conf_sway_desktop() {
+  touch ~/.dotfiles/sway/config
+  cat ~/.dotfiles/sway/config_base > config
+  cat ~/.dotfiles/sway/config_desktop >> config
+}
+
+conf_sway_laptop() {
+  touch ~/.dotfiles/sway/config
+  cat ~/.dotfiles/sway/config_base > config
+  cat ~/.dotfiles/sway/config_laptop >> config
 }
 
 conf_pkg() {

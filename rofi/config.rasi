@@ -1,7 +1,18 @@
 configuration {
   fullscreen: false;
-  show-icons: true;
-  sidebar-mode: true;
+  width: 100;
+  lines: 5;
+  line-margin: 15;
+  columns: 1;
+  font: "Roboto Mono bold 18";
+  show-icons: false;
+  bw: 0;
+  eh: 1;
+  padding: 400;
+  levenshtein-sort: true;
+  case-sensitive: false;
+  matching: "fuzzy";
+  hide-scrollbar: true;
 }
 
 * {
@@ -11,7 +22,6 @@ configuration {
 }
 
 #window {
-  font: "Nerd Font Hack 18";
   fullscreen: true;
   transparency: "background";
   background-color: #282a36BA;
