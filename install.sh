@@ -32,6 +32,7 @@ conf_dot() {
   mkdir -p ~/.config
   mkdir -p ~/.config/VSCodium
   mkdir -p ~/.config/VSCodium/User
+  mkdir -p ~/.config/sway
   sudo mkdir -p /etc/pacman.d/hooks
   # Set permissions
   ln -rsv ~/.dotfiles/docker ~/docker
@@ -53,6 +54,10 @@ symlinkDots () {
   ln -rsv ~/.dotfiles/rofi ~/.config/
   ln -rsv ~/.dotfiles/mako ~/.config/
   ln -rsv /mnt/Television/Wallpapers ~/Pictures/
+  case $HOSTNAME in
+    artemis) ln -sv ~/.dotfiles/sway/config_desktop ~/.config/sway/config ;;
+    leto) ln -sv ~/.dotfiles/sway/config_laptop ~/.config/sway/config ;;
+  esac
   sudo ln -sv ~/.dotfiles/pacman.d/mirrorupgrade.hook /etc/pacman.d/hooks/
 }
 

@@ -224,7 +224,7 @@ exec swayidle \
 bindsym $mod+r mode "$mode_resize"
 
 # Brightness commands
-bindsym --locked XF86MonBrightnessUp exec light -A 5 
+bindsym --locked XF86MonBrightnessUp exec light -A 5
 bindsym --locked XF86MonBrightnessDown exec light -U 5
 
 # Volume commands
