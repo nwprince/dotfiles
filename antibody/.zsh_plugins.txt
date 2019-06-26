@@ -1,6 +1,9 @@
-zdharma/fast-syntax-highlighting
 zsh-users/zsh-autosuggestions
 djui/alias-tips
 desyncr/auto-ls
 mafredri/zsh-async
 denysdovhan/spaceship-prompt
+
+#last
+denysdovhan/spaceship-prompt
+zdharma/fast-syntax-highlighting

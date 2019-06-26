@@ -46,11 +46,12 @@ symlinkDots () {
   ln -sv ~/.dotfiles/.zshrc.zni ~
   ln -sv ~/.dotfiles/.gitignore ~
   ln -sv ~/.dotfiles/.gitconfig ~
-  ln -sv ~/.dotfiles/vscode-insiders/settings.json ~/.config/VSCodium/User
+  ln -sv ~/.dotfiles/VSCodium/User/settings.json ~/.config/VSCodium/User/settings.json
   ln -rsv ~/.dotfiles/mpv ~/.config/
   ln -rsv ~/.dotfiles/sway ~/.config/
   ln -rsv ~/.dotfiles/waybar ~/.config/
   ln -rsv ~/.dotfiles/termite ~/.config/
+  ln -rsv ~/.dotfiles/kitty ~/.config/
   ln -rsv ~/.dotfiles/rofi ~/.config/
   ln -rsv ~/.dotfiles/mako ~/.config/
   ln -rsv /mnt/Television/Wallpapers ~/Pictures/

@@ -1,6 +1,9 @@
 [options]
 allow_bold = true
-font = Hack Nerd Font Mono 16
+font = FiraCode 16
+
+cursor_shape = ibeam
+cursor_blink = off
 
 [colors]
 # Special

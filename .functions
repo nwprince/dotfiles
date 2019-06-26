@@ -35,6 +35,9 @@ note () {
 	# cd ~/.dotfiles
 }
 
+weather () { curl wttr.in/"$1"; }
+wttr () { curl -s http://wttr.in/\?format\=3\&\?u }
+
 update_sway () {
 	case $(hostname) in
     artemis) update_sway_desktop ;;

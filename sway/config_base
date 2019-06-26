@@ -19,20 +19,20 @@
 set $mod Mod1
 
 # Movement keys
-set $left h
-set $down j
-set $up k
-set $right l
+set $left j
+set $down k
+set $up l
+set $right semicolon
 
 # Terminal
-set $term env termite
+set $term env kitty
 
 # Browser
 set $browser firefox-nightly
 set $browsernumber 2
 
 # Swaylock
-set $swaylock swaylock-fancy -f "Hack-Regular-Nerd-Font-Complete"
+set $swaylock swaylock-fancy -f "Noto"
 
 # Menu
 set $menu-run rofi -show run
@@ -137,6 +137,11 @@ bindsym $mod+Shift+$left move left
 bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
+# Moving windows with arrow keys
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 
 # Switching workspace
 bindsym $mod+1 workspace $workspace1
@@ -237,4 +242,4 @@ focus_follows_mouse yes
 
 # Gaps
 gaps outer 10
-gaps inner 10
+gaps inner 5

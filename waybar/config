@@ -4,7 +4,8 @@
   "modules-left": [
     "sway/workspaces",
     "sway/mode",
-    "custom/spotify"
+    "custom/spotify",
+    "custom/weather"
   ],
   "modules-center": [
     "clock"
@@ -30,15 +31,14 @@
   },
   "pulseaudio": {
     "tooltip": false,
+    "on-click": "pavucontrol",
+    "on-right-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "scroll-step": 5,
     "format": "{icon} {volume}%",
-    "format-muted": "奄",
+    "format-muted": "🔇",
     "format-icons": {
-      "default": [
-        "奄",
-        "奔",
-        "墳"
-      ]
+      "headphones": "",
+      "default": ["", "", ""]
     }
   },
   "network": {
@@ -72,5 +72,14 @@
     "exec": "~/.dotfiles/waybar/modules/spotify.sh",
     "exec-if": "pgrep spotify",
     "escape": true
+  },
+  "custom/weather": {
+    "format": "{}",
+    "format-alt": "{alt}: {}",
+    "format-alt-click": "click-right",
+    "interval": 1800,
+    "return-type": "json",
+    "exec": "~/.dotfiles/waybar/modules/weather.sh",
+    "exec-if": "ping wttr.in -c1"
   }
 }

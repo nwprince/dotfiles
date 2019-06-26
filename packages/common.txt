@@ -3,6 +3,7 @@ bat
 bitwarden-bin
 chrome-gnome-shell
 cowsay
+diff-so-fancy
 firefox-nightly
 fortune-mod-futurama
 fzf
@@ -24,10 +25,13 @@ ntfs-3g
 otf-fira-code
 pamac-aur
 papirus-icon-theme-git
+pavucontrol
 playerctl
 powerline-fonts
+prettyping
 reflector
 rofi
+slurp
 spotify
 sway
 swayidle
@@ -36,6 +40,7 @@ swaylock-fancy-git
 tela-icon-theme-git
 telegram-desktop
 termite
+tldr
 vlc
 vscodium
 waybar
