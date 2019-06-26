@@ -61,6 +61,8 @@ symlinkDots () {
   esac
   ln -sv ~/.dotfiles/sway/config ~/.config/sway/config
   sudo ln -sv ~/.dotfiles/pacman.d/mirrorupgrade.hook /etc/pacman.d/hooks/
+  sudo rm /etc/environment
+  sudo ln -sv ~/.dotfiles/etc/environment /etc/environment
 }
 
 conf_sway_desktop() {
