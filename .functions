@@ -55,6 +55,12 @@ update_sway_laptop () {
 	cat ~/.dotfiles/sway/config_laptop >> ~/.dotfiles/sway/config
 }
 
+test_function() {
+	echo "About to test $1"
+  ($1)
+  trap "source ~/.dotfiles/.functions && echo 'Testing $1'" EXIT
+}
+
 #fzf
 # Use fd (https://github.com/sharkdp/fd) instead of the default find
 # command for listing path candidates.
